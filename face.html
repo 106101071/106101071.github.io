@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="face">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACE!!!</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="result">
+            <img src="./images/face1.png" id="mFace" alt="">
+            <p id='mText'></p>
+            <a href="./index.html">
+                <img src="./images/home.png" alt="" class="home">
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = () =>{
+        let pText = document.getElementById('mText');
+        let faceImg = document.getElementById('mFace');
+        let leftEar = JSON.parse(localStorage.getItem('leftEar'));
+
+        switch (leftEar.count) {
+            case '0':
+                faceImg.src = "./images/face5.png";
+                pText.innerText = '厚臉皮大王是你～ 就是要My way！'
+                break;
+            case '1':
+                faceImg.src = "./images/face4.png";
+                pText.innerText = '臉皮蠻厚的哦～我就是比較直接一點啦！'
+                break;
+            case '2':
+                faceImg.src = "./images/face3.png";
+                pText.innerText = '不薄不厚剛剛好，就是個正常人！'
+                break;
+            case '3':
+                faceImg.src = "./images/face2.png";
+                pText.innerText = '臉皮蠻薄的ㄟ～人家比較容易不好意思'
+                break;
+            case '4':
+                faceImg.src = "./images/face1.png";
+                pText.innerText = '臉皮太薄拉！我就是看臉色大王'
+                break;
+            case '5':
+                faceImg.src = "./images/face1.png";
+                pText.innerText = '臉皮太薄拉！我就是看臉色大王'
+                break;
+            default:
+                console.log('error');
+                break;
+        }
+    }
+</script>
+</html>

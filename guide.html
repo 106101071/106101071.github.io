@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="guide">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Page</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="section2 section">
+            <blockquote>你我都一定遇過的場面，難道都是無聲的嗎？ 重回那些尷尬時刻，這次聽聽心裡的小劇場， 你會做出一樣的選擇嗎？看看你的臉皮有幾層！</blockquote>
+            <p>音檔播放結束後，點擊聲波圖仔細聽左右聲道播放的音訊<br>選出符合自己的內心os（藍色耳機：左聲道/ 黃色耳機：右聲道）</p>
+            <a href="./wakeup.html"><img class='goImg' src="./images/go.png" alt=""></a>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = () =>{
+        localStorage.clear();
+        localStorage.setItem('currentStep', JSON.stringify({step:'0',}));
+    }
+</script>
+</html>

@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
-
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.index{
+    background-image: url('../images/background/bg1.png');
+}
+.guide{
+    background-image: url('../images/background/guide.png');
+}
+.wakeup{
+    background-image: url('../images/background/wakeup.png');
+}
+.question{
+    background-image: url('../images/background/question.png');
+}
+.face{
+    background-image: url('../images/background/face.png');
+}
 html, body{
     width: 100%;
     height: 100vh;
 
-    background-image: url('../images/background/bg1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,10 +37,9 @@ html, body{
     justify-content: space-around;
     flex-direction: column;
 }
-.section{
+.section1{
     width: 60%;
 }
-
 .section1{
     text-align: center;
 }
@@ -39,9 +57,86 @@ html, body{
     font-size: 36px;
     font-family: 'Noto Sans TC';
     margin-top: 164px;
+    margin-bottom: 60px;
 }
 .section1 .arrow{
     width: 118px;
     height: 118px;
     margin-top: 192px;
+}
+
+.section2{
+    width: 80%;
+}
+.section2 blockquote{
+    width: 1500px;
+    font-size: 72px;
+    color: #888888;
+}
+.section2 p{
+    width: 1500 px;
+    font-size: 48px;
+    color: #888888;
+    margin-top: 193px;
+}
+.section2 .goImg{
+    margin-top: 149px;
+    margin-left: 65vw;
+}
+
+.section3 img{
+    display: inline-block;
+    margin-left: 25px;
+}
+.section3 p{
+    font-size: 72px;
+    color: #888888;
+    margin-top: 105px;
+}
+.section3 .arrow{
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    top: 693px;
+    left: 1704px;
+}
+
+.qSection{
+    width: 80%;
+}
+.qSection blockquote{
+    width: 1058px;
+    font-size: 72px;
+    color: #888888;
+    margin-top: -300px;
+}
+.qSection .imgBox{
+    position: absolute;
+    bottom: 0px;
+    left: 1384px;
+}
+.qSection .imgBox img{
+    display: inline-block;
+    width: 270px;
+    height: 435px;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result p{
+    width: 1300px;
+    font-size: 72px;
+    color: #888888;
+    text-align: center;
+}
+.result #mFace{
+    margin-bottom: 100px;
+}
+.result .home{
+    margin-top: 250px;
 }
