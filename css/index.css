@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 *{
     padding: 0;
     margin: 0;
@@ -21,9 +22,12 @@
     background-image: url('../images/background/face.png');
 }
 html, body{
-    width: 100%;
-    height: 100vh;
+    /* min-width: 1024px;  */
+    /* min-height: 800px; */
+    
+    height: 100%;
 
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,7 +40,18 @@ html, body{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    /* overflow: hidden; */
 }
+.section{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
 .section1{
     width: 60%;
 }
@@ -45,76 +60,68 @@ html, body{
 }
 .section1 img{
     width: 60%;
-    height: auto;
-    margin-top: 536px;
+    /* height: 10%; */
+    /* margin-top: 536px; */
 }
+
 .section1 p:nth-child(2){
+    width: 100%;
     font-size: 120px;
     font-family: 'Noto Sans TC';
-    margin-top: 43px;
 }
 .section1 p:nth-child(4){
     font-size: 36px;
     font-family: 'Noto Sans TC';
-    margin-top: 164px;
-    margin-bottom: 60px;
 }
 .section1 .arrow{
     width: 118px;
     height: 118px;
-    margin-top: 192px;
 }
 
 .section2{
     width: 80%;
+    height: 60%;
 }
 .section2 blockquote{
-    width: 1500px;
     font-size: 72px;
     color: #888888;
 }
 .section2 p{
-    width: 1500 px;
     font-size: 48px;
     color: #888888;
-    margin-top: 193px;
 }
 .section2 .goImg{
-    margin-top: 149px;
-    margin-left: 65vw;
 }
 
+.section3{
+}
 .section3 img{
     display: inline-block;
-    margin-left: 25px;
+    text-align: center;
 }
 .section3 p{
     font-size: 72px;
     color: #888888;
-    margin-top: 105px;
+    text-align: center;
 }
 .section3 .arrow{
     width: 150px;
     height: 150px;
-
-    position: absolute;
-    top: 693px;
-    left: 1704px;
 }
 
 .qSection{
     width: 80%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .qSection blockquote{
-    width: 1058px;
     font-size: 72px;
     color: #888888;
-    margin-top: -300px;
 }
 .qSection .imgBox{
-    position: absolute;
-    bottom: 0px;
-    left: 1384px;
 }
 .qSection .imgBox img{
     display: inline-block;
@@ -129,14 +136,32 @@ html, body{
     align-items: center;
 }
 .result p{
-    width: 1300px;
+    /* width: 1300px; */
     font-size: 72px;
     color: #888888;
     text-align: center;
 }
 .result #mFace{
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 .result .home{
-    margin-top: 250px;
+    /* margin-top: 250px; */
+}
+
+.result #mFace:hover{
+    animation-name: widthWillGrow;
+    animation-duration: 1s;
+    animation-delay: .2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes widthWillGrow{
+    from{
+        width: 509px;
+        height: 517px;
+    }
+    to{
+        width: 800px;
+        height: 517px;
+    }
 }

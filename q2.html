@@ -9,16 +9,26 @@
 <body>
     <div class="wrap">
         <div class="qSection">
-            <blockquote>你一股腦地和朋友說剛剛發生的一堆糗事，講了一長串才發現...他戴著耳機！根本沒聽到你說了什麼......</blockquote>
+            <blockquote>迎面走來你很久沒見的高中朋友，要跟他打招呼嗎...？</blockquote>
             <div class="imgBox">
                 <img src="./images/leftear.png" alt="" class="left">
                 <img src="./images/rightear.png" alt="" class="right">
             </div>
         </div>
     </div>
+    <audio autoplay id="a1">
+        <source src="./audio/q2.mp3">
+    </audio>
+    <audio id="a2">
+        <source src="./audio/q2_murmur.mp3">
+    </audio>
 </body>
 <script>
     localStorage.setItem('currentStep', JSON.stringify({step:'2',}));
+
+    document.getElementById('a1').addEventListener('ended', ()=>{
+        document.getElementById('a2').play();
+    })
 </script>
 <script src="./js/answer.js"></script>
 </html>

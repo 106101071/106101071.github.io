@@ -16,9 +16,19 @@
             </div>
         </div>
     </div>
+    <audio autoplay id="a1">
+        <source src="./audio/q5.mp3">
+    </audio>
+    <audio id="a2">
+        <source src="./audio/q5_murmur.mp3">
+    </audio>
 </body>
 <script>
     localStorage.setItem('currentStep', JSON.stringify({step:'5',}));
+
+    document.getElementById('a1').addEventListener('ended', ()=>{
+        document.getElementById('a2').play();
+    })
 </script>
 <script src="./js/answer.js"></script>
 </html>
