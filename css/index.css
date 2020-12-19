@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@font-face {
+    font-family: FakePearl-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2")
+    , url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: YuPearl-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/YuPearl@1.0/webfont/YuPearl-Regular.woff2) format("woff2")
+    , url(https://cdn.jsdelivr.net/gh/max32002/YuPearl@1.0/webfont/YuPearl-Regular.woff) format("woff");
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -22,15 +32,13 @@
     background-image: url('../images/background/face.png');
 }
 html, body{
-    /* min-width: 1024px;  */
-    /* min-height: 800px; */
-    
     height: 100%;
-
+    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: FakePearl-Regular;
 }
 .wrap{
     width: 100%;
@@ -40,7 +48,6 @@ html, body{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    /* overflow: hidden; */
 }
 .section{
     width: 100%;
@@ -53,25 +60,25 @@ html, body{
 
 
 .section1{
-    width: 60%;
+    width: 80%;
 }
 .section1{
     text-align: center;
 }
 .section1 img{
     width: 60%;
-    /* height: 10%; */
-    /* margin-top: 536px; */
 }
 
 .section1 p:nth-child(2){
     width: 100%;
-    font-size: 120px;
-    font-family: 'Noto Sans TC';
+    /* font-family: 'Noto Sans TC'; */
+    font-size: 5vw;
+    color: #888888;
 }
 .section1 p:nth-child(4){
-    font-size: 36px;
-    font-family: 'Noto Sans TC';
+    font-size: 1.8vw;
+    color: #888888;
+    /* font-family: 'Noto Sans TC'; */
 }
 .section1 .arrow{
     width: 118px;
@@ -83,71 +90,73 @@ html, body{
     height: 60%;
 }
 .section2 blockquote{
-    font-size: 72px;
+    width: 66vw;
+    font-size: 3.1vw;
     color: #888888;
 }
 .section2 p{
-    font-size: 48px;
+    width: 65vw;
+    font-size: 2.2vw;
     color: #888888;
 }
 .section2 .goImg{
 }
 
 .section3{
+    width: 75vw;
 }
 .section3 img{
-    display: inline-block;
+    /* display: inline-block; */
+    width: 20vw;
     text-align: center;
 }
 .section3 p{
-    font-size: 72px;
+    width: 100vw;
+    font-size: 40px;
     color: #888888;
     text-align: center;
 }
 .section3 .arrow{
-    width: 150px;
-    height: 150px;
+    width: 8vw;
 }
 
 .qSection{
-    width: 80%;
+    width: 70vw;
     height: 60%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
 }
 .qSection blockquote{
-    font-size: 72px;
+    font-size: 3.2vw;
     color: #888888;
+    /* line-height: 2px; */
 }
 .qSection .imgBox{
 }
 .qSection .imgBox img{
     display: inline-block;
-    width: 270px;
-    height: 435px;
+    cursor: pointer;
+    width: 10vw;
 }
-
 .result{
+    height: 100%;;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .result p{
-    /* width: 1300px; */
-    font-size: 72px;
+    font-size: 4vw;
     color: #888888;
-    text-align: center;
 }
 .result #mFace{
-    /* margin-bottom: 100px; */
+    width: 25vw;
 }
 .result .home{
-    /* margin-top: 250px; */
+    width: 5vw;
 }
-
 .result #mFace:hover{
     animation-name: widthWillGrow;
     animation-duration: 1s;
