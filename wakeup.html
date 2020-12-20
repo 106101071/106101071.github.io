@@ -13,7 +13,8 @@
         <div class="section section3">
             <img src="./images/morning.png" alt="">
             <p>起床準備出門赴約</p>
-            <a href="./q1.html"><img class='arrow' src="./images/arrow.png" alt=""></a>
+            <p>（請任意點擊畫面）</p>
+            <a id='preset' href="./q1.html" style="visibility: hidden;"><img class='arrow' src="./images/arrow.png" alt=""></a>
         </div>
     </div>
     <audio autoplay id="a1">
@@ -21,13 +22,18 @@
     </audio>
 </body>
 <script>
-    document.addEventListener('touchstart', function () {
-        function audioAutoPlay() {
-            var audio = document.getElementById('a1');
+    let preset = document.getElementById('preset');
+    document.addEventListener('touchstart', ()=>{
+        audioAutoPlay = ()=> {
+            let audio = document.getElementById('a1');
             audio.play();
         }
         audioAutoPlay();
     });
+    document.getElementById('a1').addEventListener('ended', ()=>{
+        preset.style.visibility = 'visible';
+    })
+    
 </script>
 
 </html>

@@ -5,12 +5,13 @@ window.onload = () =>{
     let leftEar = JSON.parse(localStorage.getItem('leftEar'));
 
     left.addEventListener('click', ()=>{
-        ChangePage(0);
-    })
-    right.addEventListener('click', ()=>{
         ChangePage(1);
     })
+    right.addEventListener('click', ()=>{
+        ChangePage(0);
+    })
     ChangePage = (e) =>{
+        console.log(e);
         if(e === 1)
             localStorage.setItem('leftEar', JSON.stringify({count: String(parseInt(leftEar.count)+1)}));
 
@@ -18,8 +19,6 @@ window.onload = () =>{
             window.location.replace('/q' + String(parseInt(currentStep.step)+1) + '.html');
         }
         else
-        {
             window.location.replace('/face.html');
-        }
     }
 }

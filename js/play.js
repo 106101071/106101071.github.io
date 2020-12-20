@@ -39,4 +39,5 @@ a2.addEventListener('ended', ()=>{
     for(let i = 0; i < waveRect.length; i++){
         waveRect[i].style.webkitAnimationPlayState = 'paused';
     }
+    playing = false;
 })
