@@ -54,7 +54,14 @@
             default:
                 console.log('error');
                 break;
-        }
+        };
+        document.addEventListener('touchstart', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('a1');
+                audio.play();
+            }
+            audioAutoPlay();
+        });
     }
 </script>
 </html>

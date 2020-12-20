@@ -140,6 +140,10 @@ html, body{
     cursor: pointer;
     width: 10vw;
 }
+.qSection img:nth-child(3){
+    width: 5vw;
+    cursor: pointer;
+}
 .result{
     height: 100%;;
     display: flex;
@@ -174,3 +178,77 @@ html, body{
         height: 517px;
     }
 }
+
+.loader-container {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+.loader-container > div {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: #a7d1e4;
+    height: 2.5vh;
+    width: 0.4vw;
+    margin: 0;
+    -webkit-animation: load 3s ease-in-out infinite;
+    animation: load 3s ease-in-out infinite;
+}
+
+.loader-container .rectangle-2 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    height: 2vh;
+}
+
+.loader-container .rectangle-3 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    height: 3vh;
+}
+
+.loader-container .rectangle-4 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    height: 4vh;
+}
+
+.loader-container .rectangle-5 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.loader-container .rectangle-6 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+  
+@keyframes load {
+    0%,
+    100% {
+        transform: scaleY(1);
+        background: #bad7f2;
+    }
+    16.67% {
+        transform: scaleY(3);
+        background: #ff6d63;
+    }
+    33.33% {
+        transform: scaleY(1);
+        background: #807eff;
+    }
+    50% {
+        transform: scaleY(3);
+        background: hsl(59, 100%, 76%);
+    }
+    66.67% {
+        transform: scaleY(1);
+        background: #a0f8e5;
+    }
+    83.34% {
+        transform: scaleY(3);
+        background: #bad7f2;
+    }
+} 

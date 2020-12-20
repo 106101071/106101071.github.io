@@ -16,8 +16,18 @@
             <a href="./q1.html"><img class='arrow' src="./images/arrow.png" alt=""></a>
         </div>
     </div>
-    <audio autoplay id="playAudio">
+    <audio autoplay id="a1">
         <source src="./audio/morning.mp3">
     </audio>
 </body>
+<script>
+    document.addEventListener('touchstart', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('a1');
+            audio.play();
+        }
+        audioAutoPlay();
+    });
+</script>
+
 </html>

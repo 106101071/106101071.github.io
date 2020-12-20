@@ -14,9 +14,23 @@
                 <img src="./images/leftear.png" alt="" class="left">
                 <img src="./images/rightear.png" alt="" class="right">
             </div>
+            <!-- <img id='sound' src="./images/sound.svg" alt=""> -->
+            <div class="loader-container" id='sound'>
+                <div class="rectangle-1 recc"></div>
+                <div class="rectangle-2 recc"></div>
+                <div class="rectangle-3 recc"></div>
+                <div class="rectangle-4 recc"></div>
+                <div class="rectangle-5 recc"></div>
+                <div class="rectangle-6 recc"></div>
+                <div class="rectangle-5 recc"></div>
+                <div class="rectangle-4 recc"></div>
+                <div class="rectangle-3 recc"></div>
+                <div class="rectangle-2 recc"></div>
+                <div class="rectangle-1 recc"></div> 
+              </div>
         </div>
     </div>
-    <audio autoplay id="a1">
+    <audio id="a1">
         <source src="./audio/q5.mp3">
     </audio>
     <audio id="a2">
@@ -25,18 +39,7 @@
 </body>
 <script>
     localStorage.setItem('currentStep', JSON.stringify({step:'5',}));
-
-    document.getElementById('a1').addEventListener('ended', ()=>{
-        document.getElementById('a2').play();
-    })
-
-    document.addEventListener('touchstart', function () {
-            function audioAutoPlay() {
-                var audio = document.getElementById('a1');
-                audio.play();
-            }
-            audioAutoPlay();
-        });
 </script>
+<script src="./js/play.js"></script>
 <script src="./js/answer.js"></script>
 </html>
