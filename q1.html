@@ -30,6 +30,14 @@
     document.getElementById('a1').addEventListener('ended', ()=>{
         document.getElementById('a2').play();
     })
+
+    document.addEventListener('touchstart', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('a1');
+                audio.play();
+            }
+            audioAutoPlay();
+        });
 </script>
 <script src="./js/answer.js"></script>
 </html>
