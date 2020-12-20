@@ -22,6 +22,14 @@
     window.onload = () =>{
         localStorage.clear();
         localStorage.setItem('currentStep', JSON.stringify({step:'0',}));
+
+        document.addEventListener('touchstart', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('a1');
+                audio.play();
+            }
+            audioAutoPlay();
+        });
     }
 </script>
 </html>

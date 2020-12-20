@@ -17,16 +17,18 @@
             <p class="p2">Made By Cewi<br><br>Web By 鄭柏昇</p>
         </div>
     </div>
-    <!-- <audio autoplay loop id="a1">
+    <audio autoplay loop id="a1" preload="auto">
         <source src="./audio/bgm_opening.mp3">
-    </audio> -->
-    <!-- <iframe src="./audio/bgm_opening.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
-    <audio src="./audio/bgm_opening.mp3" loop autoplay></audio>
+    </audio>
 </body>
 <script>
     window.onload = () =>{
         localStorage.clear();
         localStorage.setItem('currentStep', JSON.stringify({step:'0',}));
+
+        let a1 = document.getElementById('a1');
+        a1.load();
+        a1.play();
     }
 </script>
 </html>
